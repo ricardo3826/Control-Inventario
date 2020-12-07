@@ -8,8 +8,8 @@ namespace Inventario.COMMON.Interfaces
     public interface IRepositorio<T> where T:Base
     {
         bool Crear(T entidad);
-        bool Editar(string id, T entidadModificada);
-        bool Eliminar(T entidad);
+        bool Editar(T entidadModificada);
+        bool Delete(string id);
         List<T> Leer { get; }
     }
 }

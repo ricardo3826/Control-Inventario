@@ -4,6 +4,7 @@ using System.Text;
 using System.Linq;
 using Inventario.COMMON.Entidades;
 using Inventario.COMMON.Interfaces;
+using System.Collections;
 
 namespace Inventario.BIZ
 {
@@ -21,6 +22,11 @@ namespace Inventario.BIZ
         public bool Agregar(Check entidad)
         {
             return repositorio.Crear(entidad);
+        }
+
+        public IEnumerable BuscarNoEntregadoPorEmpleado(Empleado empleado)
+        {
+            return repositorio.Leer.Where(p => p.Solicitante.Id == empleado.Id && p.FechaEntregaReal == null);
         }
 
         public Check BuscarPorId(string id)

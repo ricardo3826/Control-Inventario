@@ -11,7 +11,7 @@ namespace Inventario.DAL
 {
     public class RepositorioDeChecks:IRepositorio<Check>
     {
-        private string DbName = "Inventario.db";
+        private string DbName = @"C:\Inventario\Inventario.db";
         private string TableName = "Check";
 
         public List<Check> Leer

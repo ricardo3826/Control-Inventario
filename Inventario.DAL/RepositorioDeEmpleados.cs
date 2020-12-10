@@ -11,7 +11,7 @@ namespace Inventario.DAL
 {
     public class RepositorioDeEmpleados : IRepositorio<Empleado>
     {
-        private string DbName = "Inventario.db";
+        private string DbName = @"C:\Inventario\Inventario.db";
         private string TableName = "Empleados";
 
         public List<Empleado> Leer {

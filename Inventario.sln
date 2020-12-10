@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.BIZ", "Inventari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.GUI.Admin", "Inventario.GUI.Admin\Inventario.GUI.Admin.csproj", "{165A6C83-A630-4ACA-B634-46CF8E123D5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.GUI.Almacen", "Inventario.GUI.Almacen\Inventario.GUI.Almacen.csproj", "{B691D470-B5E3-43D4-BE70-D889E8DBC18F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{165A6C83-A630-4ACA-B634-46CF8E123D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{165A6C83-A630-4ACA-B634-46CF8E123D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{165A6C83-A630-4ACA-B634-46CF8E123D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B691D470-B5E3-43D4-BE70-D889E8DBC18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B691D470-B5E3-43D4-BE70-D889E8DBC18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B691D470-B5E3-43D4-BE70-D889E8DBC18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B691D470-B5E3-43D4-BE70-D889E8DBC18F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

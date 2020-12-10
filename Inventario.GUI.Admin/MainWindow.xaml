@@ -9,29 +9,33 @@
     <TabControl>
         <TabItem Header="Empleados">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="229*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <WrapPanel Grid.Row="0">
+                <WrapPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,40">
                     <Button x:Name="btnEmpleadoNuevo" Click="btnEmpleadoNuevo_Click_1">Nuevo</Button>
                     <Button x:Name="btnEmpleadoEditar" Click="btnEmpleadoEditar_Click">Editar</Button>
                     <Button x:Name="btnEmpleadoGuardar" Click="btnEmpleadoGuardar_Click">Guardar</Button>
                     <Button x:Name="btnEmpleadoCancelar" Click="btnEmpleadoCancelar_Click">Cancelar</Button>
                     <Button x:Name="btnEmpleadoEliminar" Click="btnEmpleadoEliminar_Click">Eliminar</Button>
                 </WrapPanel>
-                <WrapPanel Grid.Row="1">
+                <WrapPanel Grid.ColumnSpan="2" Margin="0,20,0,22">
                     <StackPanel  Orientation="Horizontal">
                         <TextBlock>Id:</TextBlock>
                         <TextBlock x:Name="txboxEmpleadoId"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock>Nombre: </TextBlock>
+                        <TextBlock>Nombre:</TextBlock>
                         <TextBox x:Name="TxboxEmpleadosNombre" Width="200"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock>Apellido: </TextBlock>
+                        <TextBlock>Apellido:</TextBlock>
                         <TextBox x:Name="TxboxEmpleadosApellidos" Width="200"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -39,12 +43,45 @@
                         <TextBox x:Name="TxboxEmpleadosArea" Width="200"></TextBox>
                     </StackPanel>
                 </WrapPanel>
-                <DataGrid x:Name="dtgEmpleados" Grid.Row="2" IsReadOnly="True"/>
+                <DataGrid x:Name="dtgEmpleados" IsReadOnly="True" Grid.ColumnSpan="2" Margin="0,38,0,0" Grid.RowSpan="3"/>
 
             </Grid>
         </TabItem>
         <TabItem Header="Materiales">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0">
+                    <Button x:Name="btnMaterialNuevo" Click="btnMaterialNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnMaterialEditar" Click="btnMaterialEditar_Click">Editar</Button>
+                    <Button x:Name="btnMaterialGuardar" Click="btnMaterialGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnMaterialCancelar" Click="btnMaterialCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnMaterialEliminar" Click="btnMaterialEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1">
+                    <StackPanel  Orientation="Horizontal">
+                        <TextBlock>Id:</TextBlock>
+                        <TextBlock x:Name="txboxMaterialId"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Nombre:</TextBlock>
+                        <TextBox x:Name="TxboxMaterialNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Categoria:</TextBlock>
+                        <TextBox x:Name="TxboxMaterialCategoria" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Descripcion:</TextBlock>
+                        <TextBox x:Name="TxboxMaterialDescripcion" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgMateriales" Grid.Row="2" IsReadOnly="True"/>
 
+            </Grid>
         </TabItem>
         <TabItem Header="Reportes">
 

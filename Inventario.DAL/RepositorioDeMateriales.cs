@@ -8,9 +8,9 @@ using LiteDB;
 
 namespace Inventario.DAL
 {
-    public class RepositorioDeMateriales
+    public class RepositorioDeMateriales:IRepositorio<Materiales>
     {
-        private string DbName = "Inventario.db";
+        private string DbName = @"C:\Inventario\Inventario.db";
         private string TableName = "Materiales";
 
         public List<Materiales> Leer

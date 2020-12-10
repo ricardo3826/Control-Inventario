@@ -19,7 +19,27 @@
                         <ComboBox Width="200" x:Name="cmbpersona" SelectionChanged="cmbpersona_SelectionChanged"></ComboBox>
                         <Button x:Name="btnImprimirPorPersona">Imprimir</Button>
                     </StackPanel>
-                    <DataGrid x:Name="dtgTablareportes" Grid.Row="1"></DataGrid>
+                    <ListView x:Name="dtgTablareportes" Grid.Row="1">
+                        <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="{Binding Solicitante}" Grid.Column="0" Grid.Row="0"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding FechaEntrega}"/>
+                                    <Expander Header="Productos" Grid.Column="0" Grid.Row="1">
+                                        <DataGrid IsReadOnly="True" ItemsSource="{Binding MaterialesPrestados}"></DataGrid>
+                                    </Expander>    
+                            </Grid>
+                        </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </TabItem>
         </TabControl>
